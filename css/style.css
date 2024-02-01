@@ -1,40 +1,44 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #9996be;
+a{
+    text-decoration: none;
 }
-.up i{
+body {
+    background-color: #c2c0e2;
+}
+
+.up i {
     padding: 10px;
     position: fixed;
     bottom: 3%;
     right: 3%;
     background-color: #469778;
     padding: 0;
-    width:fit-content;  
+    width: fit-content;
     border-radius: 50%;
     font-size: 2rem;
 }
-ul, li{
+
+ul,li {
     list-style: none;
     padding: 10px;
 }
-.listMenu li a{
-    display: block;
-}
-.listMenu > li{
-    float: left;
-}
-.listMenu li ul{
-    display: none;
-    background-color:#90d8bc ;
-    min-width: 164.27px;
-}
-.listMenu li:hover >ul{
-    display: block;
+.aMenu2{
     position: absolute;
+    float: left;
+    right: 450.1px;
+}
+.menuCat {
+    position: absolute;
+    top: 65px;
+    right: 410px;
+    display: none;
+    box-shadow: 3px 3px 4px gray;
+    background-color: #c2c0e2;
+    
 }
 .nave {
     display: flex;
@@ -44,62 +48,108 @@ ul, li{
     padding: 0px 20px;
     padding-left: 60px;
 }
+.menuCat:target{
+    display: block;
+    --estado-cerrar: scale(1);
+    --estado-abrir: scale(0);    
+}
 
-.aMenu{
+.menu {
+    --estado-cerrar: scale(0);
+    --estado-abrir: scale(1);
+    display: flex;
+}
+
+.aMenu1{
+    transform: var(--estado-abrir);
+}
+.aMenu2{
+    transform: var(--estado-cerrar);
+}
+.aMenu {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     font-size: 1.7rem;
     font-weight: bold;
     padding: 0px 30px;
     transition: 0.4s;
 }
 
-.navTarget, .cerrar-menu, .menuCat{
+.navTarget, .cerrar-menu {
     display: none;
     cursor: pointer;
     order: 1;
 }
 
-.aMenu:hover{
+.aMenu:hover {
     background-color: #469778;
 }
 
 #home{
-    padding: 10px 80px;
+    padding: 10px 60px;
     display: flex;
     justify-content: center;
     margin: 20px;
     align-items: center;
 }
-#home div{
-    margin: 50px;
-    padding: 50px;
-    font-size: 1.7rem;
-}
-#home p{
-    color: #fff;
-    margin-top: 20px;
-    font-weight: bold;
-}
+
 #home img{
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     height: 100%;
+    box-shadow: 3px 3px 8px gray;
+}
+.destacados{
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 25px 50px;
+    align-items: center;
+}
+.destacados img{
+    max-width: 500px;
+    width: 100%;
+}
+.items-1{
+    display: flex;
+    justify-content: space-around;
+}
+.item-1{
+    min-width: 33%;
+    margin: 20px;
+    padding: 20px 60px;
+    background-color: #ffefe8;
+    text-align: center;
+    position: relative;
+    border-radius: 5%;
 }
 
-.boton {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    background-color: #ff702a;
-    transition: 0.4s;    
-    margin-top: 40px;
+.destacados i{
+    background-color: #d1c3f8;
+    padding: 0;
+    width:fit-content;
+    height: 27.2px;    
+    border-radius: 20%;
+}
+.destacados .icon{
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: gray;
+}
+.destacados .icon:hover{
+    color: #000;
+    transition: 0.8s;
 }
 
-@media (max-width: 800px){
+
+
+@media (max-width: 750px){
     .navTarget{
         display: block;
+    }
+    .aMenu{
+        color: #fff;
     }
     .menu{
         position: fixed;
@@ -123,11 +173,6 @@ ul, li{
         display: block;
         padding: 20px;
     }
-    .cerrar-menu{      
-        position: absolute;
-        top: 0px;
-        right: 0px;
-    }
     .listMenu li > ul{
         pointer-events: none;
     }
@@ -135,18 +180,41 @@ ul, li{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #2c2b47;
+        background: #494872;
         left: 0;
         top: 0;
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 100px;
+        padding: 50px;
         z-index: 1;        
-        clip-path: circle(0% at top left);
+        clip-path: circle(0% at top right);
         transition: clip-path 0.6s;
     }
+    .cerrar-menu{      
+        position: absolute;
+        top: 14px;
+        right: 0px;
+        z-index: 1;    
+    }
+    .cerrar-menu1{      
+        position: absolute;
+        top: 14px;
+        right: 0px;
+        z-index: 1;    
+    }
     .menuCat:target{
-        clip-path: circle(150% at top left);
+        clip-path: circle(150% at top right);
     } 
+    .destacados{
+        align-items: center;
+        padding: 10px;
+    }
+    .items-1, .items-2, .items-3{
+        flex-direction: column;
+    }
+    .item-1{
+        padding: 0;
+        margin: 20px 50px;
+    }
 }
