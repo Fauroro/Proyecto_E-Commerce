@@ -3,11 +3,9 @@
     margin: 0;
     padding: 0;
 }
-
 body{
-    background-color: #dab5ac;
+    background-color: #9996be;
 }
-
 .up i{
     padding: 10px;
     position: fixed;
@@ -19,7 +17,6 @@ body{
     border-radius: 50%;
     font-size: 2rem;
 }
-
 ul, li{
     list-style: none;
     padding: 10px;
@@ -35,7 +32,11 @@ ul, li{
     background-color:#90d8bc ;
     min-width: 164.27px;
 }
-.nav {
+.listMenu li:hover >ul{
+    display: block;
+    position: absolute;
+}
+.nave {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,17 +44,14 @@ ul, li{
     padding: 0px 20px;
     padding-left: 60px;
 }
-.listMenu li:hover >ul{
-    display: block;
-    position: absolute;
-}
+
 .aMenu{
     text-decoration: none;
     color: #fff;
     font-size: 1.7rem;
     font-weight: bold;
     padding: 0px 30px;
-    transition: 0.6s;
+    transition: 0.4s;
 }
 
 .navTarget, .cerrar-menu, .menuCat{
@@ -66,6 +64,89 @@ ul, li{
     background-color: #469778;
 }
 
+#home{
+    padding: 10px 80px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+}
+#home div{
+    margin: 50px;
+    padding: 50px;
+    font-size: 1.7rem;
+}
+#home p{
+    color: #fff;
+    margin-top: 20px;
+    font-weight: bold;
+}
+#home img{
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+}
 
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #ff702a;
+    transition: 0.4s;    
+    margin-top: 40px;
+}
 
-
+@media (max-width: 800px){
+    .navTarget{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c2b47;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 50px;
+        z-index: 1;        
+        clip-path: circle(0% at top right);
+        transition: clip-path 0.6s;
+    }
+    .menu:target{
+        clip-path: circle(150% at top right);
+    }    
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .cerrar-menu{      
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .listMenu li > ul{
+        pointer-events: none;
+    }
+    .menuCat{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c2b47;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 100px;
+        z-index: 1;        
+        clip-path: circle(0% at top left);
+        transition: clip-path 0.6s;
+    }
+    .menuCat:target{
+        clip-path: circle(150% at top left);
+    } 
+}
