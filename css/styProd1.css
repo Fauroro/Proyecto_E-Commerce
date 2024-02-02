@@ -1,0 +1,55 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+.preview{
+    padding: 10px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.content{
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+}
+.content div{
+    margin: 50px;
+    padding: 50px;
+    margin-top: 0;
+
+}
+.preview p{
+    color: #fff;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.preview img{
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+}
+.vistas{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.vistas img{
+    min-width: 80px;
+    max-width: 100px;
+    width: 100%;
+    height: 100%;
+}
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: #ff702a;
+    transition: 0.4s;    
+    margin-top: 40px;
+}
+.boton:hover{
+    transform: scale(1.05);
+}
