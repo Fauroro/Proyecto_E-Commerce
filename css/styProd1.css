@@ -3,7 +3,7 @@
     align-items: center;
 }
 .preview{
-    padding: 10px 40px;
+    padding: 10px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,28 +18,49 @@
     margin: 50px;
     padding: 50px;
     margin-top: 0;
-
 }
+
 .preview p{
-    color: #fff;
+    color: #000;
     margin-top: 20px;
-    font-weight: bold;
+    font-weight: 100px;
+    text-align: justify;
 }
 .preview img{
     max-width: 400px;
     width: 100%;
     height: 100%;
 }
+.imgPpal{
+    background: url('../images/rubik.png') no-repeat center center;
+    background-size: cover;
+    width: 400px;
+    min-width: 350px;
+    min-height: 350px;
+    padding: 0;
+    margin: 20px;
+    grid-column: 2;
+    grid-row: 1/span 4;
+    object-fit: cover;
+}
 .vistas{
-    display: flex;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(4,1fr);
     gap: 15px;
-    flex-direction: column;
+    width: 60%;
+    height: 100%;
 }
 .vistas img{
-    min-width: 80px;
+    min-width: 50px;
     max-width: 100px;
+    min-height: 50px;
+    max-height: 100px;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+    grid-column: 1;
 }
 .boton {
     display: inline-block;
@@ -52,4 +73,79 @@
 }
 .boton:hover{
     transform: scale(1.05);
+}
+.vistas > .vista1:hover ~ .imgPpal{
+    background: url('../images/producto1/vista1.jpg') no-repeat center center;
+    background-size: cover;
+    width: 400px;
+    min-width: 350px;
+    min-height: 350px;
+    box-shadow: 10px 10px 10px gray;
+}
+.vistas > .vista2:hover ~ .imgPpal{
+    background: url('../images/producto1/vista2.jpg') no-repeat center center;
+    background-size: cover;
+    width: 400px;
+    min-width: 350px;
+    min-height: 350px;
+    box-shadow: 10px 10px 10px gray;
+}
+.vistas > .vista3:hover ~ .imgPpal{
+    background: url('../images/producto1/vista3.jpg') no-repeat center center;
+    background-size: cover;
+    width: 400px;
+    min-width: 350px;
+    min-height: 350px;
+    box-shadow: 10px 10px 10px gray;
+}
+.vistas > .vista4:hover ~ .imgPpal{
+    background: url('../images/producto1/vista4.jpg') no-repeat center center;
+    background-size: cover;
+    width: 400px;
+    min-width: 350px;
+    min-height: 350px;
+    box-shadow: 10px 10px 10px gray;
+}
+
+@media (max-width: 750px){
+    .preview{
+        margin: 0;
+        padding: 30px;
+        padding-top: 0;
+    }
+    .vistas{
+        grid-auto-flow: column;
+        justify-content: center;
+    
+    }
+    .container{
+        flex-direction: column;
+    }
+    .content{
+        margin: 10px;
+        padding: 10px;
+        margin-top: 0;
+        justify-content: center;
+    }
+    .content div{
+        padding: 0;
+        margin: 0;
+    }
+    .vistas {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 80% 20%;
+    }
+    .vistas img{
+        min-width: 40px;
+        max-width: 60px;
+        width: 100%;
+        height: 100%;
+        grid-row: 2;
+    }
+    
+    .imgPpal {
+        width: 400px;
+        grid-row: 1;
+        grid-column: 1/span 4;
+    }
 }
