@@ -2,150 +2,177 @@
     display: flex;
     align-items: center;
     padding: 50px;
+    padding-top: 0;
     gap: 50px;
 }
 .preview{
     padding: 10px 60px;
-    display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
 .content{
     display: flex;
+    width: fit-content;
     flex-direction: column;
     align-items: center;
     font-size: 1.7rem;
-    margin: 50px;
-    padding: 50px;
+    padding: 0px 50px;
     margin-top: 0;
 }
 .preview p{
     color: #000;
-    margin-top: 20px;
     font-weight: 100px;
     text-align: justify;
 }
-.preview img{
-    max-width: 400px;
-    width: 100%;
-    height: 100%;
-}
 .imgPpal{
-    background: url('../images/rubik.png') no-repeat center center;
+    background: url('../images/producto1/rubik.png') no-repeat center center;
     background-size: cover;
     width: 100%;
-    min-width: 350px;
-    min-height: 350px;
     padding: 0;
     margin: 20px;
     grid-column: 2;
     grid-row: 1/span 4;
-    object-fit: cover;
 }
 .vistas{
-    margin: 10px;
+    margin: 20px;
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: repeat(4,1fr);
     gap: 15px;
-    width: 60%;
+    width: 100%;
     height: 100%;
 }
 .vistas img{
-    min-width: 50px;
-    max-width: 100px;
-    min-height: 50px;
-    max-height: 100px;
     width: 100%;
     height: 100%;
     cursor: pointer;
-    grid-column: 1;
-}
-.boton {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    background-color: #ff702a;
-    transition: 0.4s;    
-    margin-top: 40px;
-}
-.boton:hover{
-    transform: scale(1.05);
 }
 .vistas > .vista1:hover ~ .imgPpal{
     background: url('../images/producto1/vista1.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
-    min-width: 350px;
-    min-height: 350px;
     box-shadow: 10px 10px 10px gray;
 }
 .vistas > .vista2:hover ~ .imgPpal{
     background: url('../images/producto1/vista2.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
-    min-width: 350px;
-    min-height: 350px;
     box-shadow: 10px 10px 10px gray;
 }
 .vistas > .vista3:hover ~ .imgPpal{
     background: url('../images/producto1/vista3.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
-    min-width: 350px;
-    min-height: 350px;
     box-shadow: 10px 10px 10px gray;
 }
 .vistas > .vista4:hover ~ .imgPpal{
     background: url('../images/producto1/vista4.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
-    min-width: 350px;
-    min-height: 350px;
     box-shadow: 10px 10px 10px gray;
 }
+.detalles {
+    display: flex;
+    justify-content: center;
+}
+.detalles div{
+    width: 80%;
+    font-size: 1.3rem;
+}
+.detalles li{
+    list-style: inside;
+}
+#review {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 20px;
+    text-align: justify;
+}
+.review{
+    width: 80%;
+    font-size: 1.3rem;
+}
 
-@media (max-width: 750px){
-    .preview{
-        margin: 0;
-        padding: 30px;
-        padding-top: 0;
-    }
+.contStar{
+    width: 68px;
+}
+.contStar1{
+    width: 55px;
+}
+.contStar2{
+    width: 27px;
+}
+.stars{
+    background: url('../images/star-full.png') repeat-x 0 0;
+    background-size: auto 100%;
+    height: 13px;
+}
+
+@media (max-width: 900px){
     .container{
         flex-direction: column;
     }
+    .preview{
+        margin: 0;
+        padding: 0;
+    }
+    .preview p{
+        font-size: 1.2rem;
+
+    }
     .content{
         flex-direction: column;
-        margin: 10px;
-        padding: 10px;
+        padding: 5px;
         margin-top: 0;
         justify-content: center;
-        padding: 0;
-        margin: 0;
     }
-
     .vistas{
         margin: 10px;
         display: grid;
-        grid-template-rows: 20% 80%;
         grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 80% 20%;
+        justify-content: center;
         gap: 15px;
-        width: 60%;
-        height: 100%;
-    }
-    .vistas img{
-        min-width: 40px;
-        max-width: 60px;
         width: 100%;
-        height: 100%;
-        /* grid-row: -2; */
+        height: 400px;
     }
-    
     .imgPpal {
         width: 100%;
+        margin-left: 0;
+        height: auto;
         grid-row: 1;
         grid-column: 1/span 4;
+    }
+    .vistas img{
+        width: 100%;
+        height: auto;
+    }
+    .vista1{
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .vista2{
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .vista3{
+        grid-row: 2;
+        grid-column: 3;
+    }
+    .vista4{
+        grid-row: 2;
+        grid-column: 4;
+    }
+    .detalles div{
+        width: 80%;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    
+    .review{
+        width: 95%;
+        font-size: 1rem;
     }
 }

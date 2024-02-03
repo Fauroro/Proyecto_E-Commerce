@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+header{
+    background-color: #656572;
+}
 a{
     text-decoration: none;
 }
