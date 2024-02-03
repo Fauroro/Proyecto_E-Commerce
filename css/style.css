@@ -3,22 +3,27 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background: url('../images/5594016.jpg') no-repeat center center fixed;
+    background-size: cover;
+    
+}
 header{
-    background-color: #656572;
+    background: lightgray;
 }
 a{
     text-decoration: none;
 }
-body {
-    background-color: #c2c0e2;
+a:visited{
+    color: inherit;
 }
-
 .up i {
+    color: #d3d3d3;
     padding: 10px;
     position: fixed;
     bottom: 3%;
     right: 3%;
-    background-color: #469778;
+    background-color: #193d549a;
     padding: 0;
     width: fit-content;
     border-radius: 50%;
@@ -41,7 +46,8 @@ ul,li {
     right: 410px;
     display: none;
     box-shadow: 3px 3px 4px gray;
-    background-color: #c2c0e2;
+    background-color: #d3d3d3;
+    z-index: 10;
     
 }
 .nave {
@@ -86,7 +92,8 @@ ul,li {
 }
 
 .aMenu:hover {
-    background-color: #469778;
+    background-color: #193d549a;
+    color: #d3d3d3;
 }
 
 #home{
@@ -125,14 +132,14 @@ ul,li {
     min-width: 33%;
     margin: 20px;
     padding: 20px 60px;
-    background-color: #ffefe8;
+    background-color: #d3d3d3;
     text-align: center;
     position: relative;
     border-radius: 5%;
 }
 
 .destacados i{
-    background-color: #d1c3f8;
+    background-color: #9c9c9c;
     padding: 0;
     width:fit-content;
     height: 27.2px;    
@@ -143,11 +150,11 @@ ul,li {
     position: absolute;
     top: 0;
     right: 0;
-    color: gray;
+    color: rgb(80, 80, 80);
 }
 .destacados .icon:hover{
     color: #000;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 
@@ -163,7 +170,7 @@ ul,li {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #2c2b47;
+        background: #d3d3d3;
         left: 0;
         top: 0;
         display: flex;
@@ -188,7 +195,7 @@ ul,li {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #494872;
+        background: #9e9e9e;
         left: 0;
         top: 0;
         display: flex;
