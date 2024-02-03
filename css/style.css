@@ -50,7 +50,7 @@ ul,li {
     z-index: 10;
     
 }
-.nave {
+.nave, .navCat {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,23 +58,22 @@ ul,li {
     padding: 0px 20px;
     padding-left: 60px;
 }
+.navCat{
+    background-color: rgb(182, 182, 182);
+    height: 50px;
+}
+.navCat a{
+    font-size: 1.3rem;
+}
+
 .menuCat:target{
     display: block;
-    --estado-cerrar: scale(1);
-    --estado-abrir: scale(0);    
 }
-
-.menu {
-    --estado-cerrar: scale(0);
-    --estado-abrir: scale(1);
+.menuProd{
     display: flex;
 }
-
-.aMenu1{
-    transform: var(--estado-abrir);
-}
-.aMenu2{
-    transform: var(--estado-cerrar);
+.menu {
+    display: flex;
 }
 .aMenu {
     text-decoration: none;
@@ -85,7 +84,7 @@ ul,li {
     transition: 0.4s;
 }
 
-.navTarget, .cerrar-menu {
+.navTarget, .navCatTarget, .cerrar-menu {
     display: none;
     cursor: pointer;
     order: 1;
@@ -160,13 +159,13 @@ ul,li {
 
 
 @media (max-width: 750px){
-    .navTarget{
+    .navTarget, .navCatTarget{
         display: block;
     }
     .aMenu{
         color: #fff;
     }
-    .menu{
+    .menu, .menuProd{
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -181,12 +180,12 @@ ul,li {
         clip-path: circle(0% at top right);
         transition: clip-path 0.6s;
     }
-    .menu:target{
+    .menu:target, .menuProd:target{
         clip-path: circle(150% at top right);
     }    
-    .menu a{
+    .menu a, .menuProd a, .menuCat a{
         display: block;
-        padding: 20px;
+        padding: 5px;
     }
     .listMenu li > ul{
         pointer-events: none;
@@ -210,13 +209,13 @@ ul,li {
         position: absolute;
         top: 14px;
         right: 0px;
-        z-index: 1;    
+        z-index: 4;    
     }
     .cerrar-menu1{      
         position: absolute;
         top: 14px;
         right: 0px;
-        z-index: 1;    
+        z-index: 4;    
     }
     .menuCat:target{
         clip-path: circle(150% at top right);

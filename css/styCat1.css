@@ -1,8 +1,7 @@
 .container{
     display: flex;
     align-items: center;
-    padding: 50px;
-    padding-top: 0;
+    padding: 0px 50px;
     gap: 50px;
     border-radius: 10px;
     border: 2px solid gray;
@@ -30,7 +29,7 @@
     text-align: justify;
 }
 .imgPpal{
-    background: url('../images/producto1/rubik.png') no-repeat center center;
+    background: url('../images/Cat1/producto1/rubik.png') no-repeat center center;
     background-size: cover;
     width: 100%;
     padding: 0;
@@ -52,30 +51,6 @@
     height: 100%;
     cursor: pointer;
 }
-.vistas > .vista1:hover ~ .imgPpal{
-    background: url('../images/producto1/vista1.jpg') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    box-shadow: 10px 10px 10px gray;
-}
-.vistas > .vista2:hover ~ .imgPpal{
-    background: url('../images/producto1/vista2.jpg') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    box-shadow: 10px 10px 10px gray;
-}
-.vistas > .vista3:hover ~ .imgPpal{
-    background: url('../images/producto1/vista3.jpg') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    box-shadow: 10px 10px 10px gray;
-}
-.vistas > .vista4:hover ~ .imgPpal{
-    background: url('../images/producto1/vista4.jpg') no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    box-shadow: 10px 10px 10px gray;
-}
 .boton {
     display: inline-block;
     text-decoration: none;
@@ -86,6 +61,95 @@
 }
 .boton:hover{
     transform: scale(1.1);
+}
+
+.imgPpal1{
+    background: url('../images/Cat1/producto1/rubik.png') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista1:hover ~ .imgPpal1{
+    background: url('../images/Cat1/producto1/vista1.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: 10px 10px 10px gray;
+}
+.vistas > .vista2:hover ~ .imgPpal1{
+    background: url('../images/Cat1/producto1/vista2.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: 10px 10px 10px gray;
+}
+.vistas > .vista3:hover ~ .imgPpal1{
+    background: url('../images/Cat1/producto1/vista3.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: 10px 10px 10px gray;
+}
+.vistas > .vista4:hover ~ .imgPpal1{
+    background: url('../images/Cat1/producto1/vista4.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    box-shadow: 10px 10px 10px gray;
+}
+.imgPpal2{
+    background: url('../images/Cat1/producto2/producto2.png') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista1:hover ~ .imgPpal2{
+    background: url('../images/Cat1/producto2/vista1.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista2:hover ~ .imgPpal2{
+    background: url('../images/Cat1/producto2/vista2.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista3:hover ~ .imgPpal2{
+    background: url('../images/Cat1/producto2/vista3.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista4:hover ~ .imgPpal2{
+    background: url('../images/Cat1/producto2/vista4.jpg') no-repeat center center;
+    background-size: cover;
+}
+.imgPpal3{
+    background: url('../images/Cat1/producto3/prod3.png') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista1:hover ~ .imgPpal3{
+    background: url('../images/Cat1/producto3/vista1.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista2:hover ~ .imgPpal3{
+    background: url('../images/Cat1/producto3/vista2.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista3:hover ~ .imgPpal3{
+    background: url('../images/Cat1/producto3/vista3.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista4:hover ~ .imgPpal3{
+    background: url('../images/Cat1/producto3/vista4.jpg') no-repeat center center;
+    background-size: cover;
+}
+.imgPpal4{
+    background: url('../images/Cat1/producto4/prod4.png') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista1:hover ~ .imgPpal4{
+    background: url('../images/Cat1/producto4/vista1.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista2:hover ~ .imgPpal4{
+    background: url('../images/Cat1/producto4/vista2.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista3:hover ~ .imgPpal4{
+    background: url('../images/Cat1/producto4/vista3.jpg') no-repeat center center;
+    background-size: cover;
+}
+.vistas > .vista4:hover ~ .imgPpal4{
+    background: url('../images/Cat1/producto4/vista4.jpg') no-repeat center center;
+    background-size: cover;
 }
 
 @media (max-width: 900px){
