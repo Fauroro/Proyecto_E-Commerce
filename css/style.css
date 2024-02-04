@@ -105,13 +105,13 @@ ul,li {
     justify-content: center;
     margin: 20px;
     align-items: center;
+    background-color: #d3d3d3;
 }
 
 #home img{
-    max-width: 600px;
+    max-width: 70%;
     width: 100%;
     height: 100%;
-    box-shadow: 3px 3px 8px gray;
 }
 .destacados{
     text-align: center;
